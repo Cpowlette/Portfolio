@@ -1,0 +1,73 @@
+:root { color-scheme:light; --ink:#171717; --muted:#595959; --paper:#fbf8f3; --accent:#192d32; --line:#d9d0c4 }
+* { box-sizing:border-box }
+body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif }
+a { color:inherit; text-underline-offset:4px }
+a:focus-visible,button:focus-visible { outline:3px solid #9b6d2d; outline-offset:5px }
+.skip-link { position:absolute; left:16px; top:-100px; padding:10px 16px; background:#fff; z-index:2 }
+.skip-link:focus { top:12px }
+.resume-toolbar { max-width:960px; padding:24px 0; margin:auto; display:flex; justify-content:space-between; align-items:center; gap:16px }
+.resume-toolbar a { font-size:14px }
+button { border:1px solid var(--accent); border-radius:4px; padding:11px 18px; background:var(--accent); color:#fff; cursor:pointer; font:inherit; font-size:14px; min-height:44px }
+[hidden] { display:none!important }
+main { max-width:960px; margin:0 auto 60px }
+.resume-sheet { padding:48px 56px; margin-bottom:28px; border:1px solid var(--line); background:#fff; box-shadow:0 8px 30px #17171708 }
+.resume-header { padding-bottom:24px; border-bottom:3px solid var(--accent) }
+.eyebrow { font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin:0 0 12px }
+h1 { font:normal clamp(36px,5vw,54px)/1.08 Georgia,'Times New Roman',serif; margin:0 0 18px; letter-spacing:-.025em }
+.specialty { font-size:20px; font-weight:650; margin:0 0 4px }
+.musical-focus { margin:0; color:var(--muted) }
+address { margin-top:18px; font-style:normal; font-size:14px; overflow-wrap:anywhere }
+section { margin-top:28px }
+h2 { margin:0 0 16px; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); padding-bottom:8px; border-bottom:1px solid var(--line) }
+h3 { margin:0; font-size:16px; line-height:1.45; font-weight:700 }
+p { margin:4px 0 }
+.resume-entry { margin-top:14px; break-inside:avoid }
+.entry-heading { display:flex; justify-content:space-between; align-items:baseline; gap:18px }
+.entry-heading h3 { min-width:0 }
+.entry-heading>p { flex-shrink:0; margin:0; font-size:13px; font-weight:600; color:var(--muted) }
+.entry-context { color:var(--muted); font-size:14px }
+.workshops { margin:8px 0 0; padding-left:20px; display:grid; grid-template-columns:1fr 1fr; gap:4px 28px; font-size:14px }
+.continuation-header { padding-bottom:16px; border-bottom:3px solid var(--accent); font-weight:700 }
+.continuation-header span { float:right; font-size:12px; font-weight:400; color:var(--muted) }
+.company-label { font-size:14px; color:var(--muted); margin-bottom:18px }
+.section-period { color:var(--muted); font-size:13px; margin-bottom:10px }
+.engagements { margin:0; padding-left:20px }
+.engagements li { margin:6px 0; break-inside:avoid }
+.resume-footer { border-top:1px solid var(--line); margin-top:26px; padding-top:16px; font-size:13px }
+@media(max-width:1000px) { .resume-toolbar,main { margin-left:20px; margin-right:20px } }
+@media(max-width:600px) {
+  body { font-size:14px }
+  .resume-toolbar { flex-wrap:wrap }
+  .resume-sheet { padding:28px 22px }
+  .entry-heading { display:block }
+  .entry-heading>p { margin-top:3px }
+  .workshops { grid-template-columns:1fr }
+  .continuation-header span { display:block; float:none; margin-top:4px }
+  address a { overflow-wrap:anywhere }
+}
+@page { size:letter; margin:0.55in 0.6in }
+@media print {
+  body { background:#fff; color:#000; font-size:9.5pt; line-height:1.4 }
+  .resume-toolbar,.skip-link { display:none!important }
+  main { max-width:none; margin:0 }
+  .resume-sheet { padding:0; margin:0; border:0; box-shadow:none }
+  .performance-sheet { break-before:page }
+  .resume-header { padding-bottom:14px }
+  h1 { font-size:30pt; margin-bottom:10px }
+  .eyebrow { font-size:8pt; margin-bottom:8px }
+  .specialty { font-size:13pt }
+  address { font-size:9pt; margin-top:12px }
+  section { margin-top:18px }
+  h2 { font-size:10pt; margin-bottom:10px; padding-bottom:5px; break-after:avoid }
+  h3 { font-size:10pt }
+  .resume-entry { margin-top:9px }
+  .entry-heading { display:flex }
+  .entry-heading>p,.entry-context,.section-period { font-size:8.5pt }
+  .workshops { display:grid; grid-template-columns:1fr 1fr; font-size:9pt; gap:3px 20px }
+  .company-label { font-size:9pt; margin-bottom:10px }
+  .continuation-header { padding-bottom:10px }
+  .continuation-header span { float:right; font-size:8pt }
+  .engagements li { margin:4px 0 }
+  .resume-footer { margin-top:16px; padding-top:10px; font-size:8pt }
+  a { text-decoration:none }
+}

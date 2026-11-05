@@ -1,0 +1,14 @@
+/* Shared colours for the existing editable project and case-study pages. */
+:root{--bg:#0b1120;--surface:#111827;--surface-2:#152238;--text:#f8fafc;--muted:#a4b0c5;--accent:#60caff;--accent-2:#2563eb;--border:#293b56;--line:#293b56}
+body{background:#0b1120;color:#f8fafc}
+.site-header{background:#0b1120ef;border-bottom:1px solid #293b56}
+.card,.cs-toc,.diagram-frame{background:#111c2e;border-color:#293b56;border-radius:12px}
+.cs-hero{background:radial-gradient(ellipse at right top,#18315b70,transparent 70%);border-color:#293b56}
+.cs-hero h1,.cs-body h2,.section-head h2{color:#f8fafc;letter-spacing:-.04em}
+.cs-body p,.cs-body li,.cs-summary,.project-desc{color:#b6c4d9}
+.btn-primary{background:#2563eb;color:white;border-color:#2563eb}
+.chip,.callout{background:#14233a;border-color:#304b70;color:#b9cce5}
+.brand-mark{background:#18304d;color:#60caff;border-color:#3f75a8}
+.cs-crumb a,.cs-body a:not(.btn){color:#7bd1ff}
+:focus-visible{outline:2px solid #60caff;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

@@ -1,0 +1,30 @@
+/* Original photography. The source files are preserved and never stretched. */
+.portrait-cover { padding:0 0 0 20px; max-width:420px; width:100%; justify-self:center; position:relative }
+.portrait-cover::before { content:''; position:absolute; inset:55px -16px 40px 50px; background:var(--sand); border:1px solid var(--caramel); z-index:0; border-radius:100px 3px 3px 3px }
+.portrait-cover>.eyebrow,.portrait-cover figure { position:relative; z-index:1 }
+.hero-portrait-photo { margin:0; width:100% }
+.hero-portrait-photo>a { display:block; border-radius:90px 3px 3px 3px; overflow:hidden; background:var(--white); border:1px solid var(--rule) }
+.hero-portrait-photo img { display:block; width:100%; height:auto; max-height:520px; object-fit:contain }
+.hero-portrait-photo figcaption { color:var(--grey); font:400 10px/1.8 'JetBrains Mono',monospace; padding-top:14px }
+.story-photo,.timeline-photo,.leadership-photo,.education-photo,.case-photo,.infrastructure-photo { margin:0; min-width:0 }
+.story-photo>a,.timeline-photo>a,.leadership-photo>a,.education-photo>a,.case-photo>a,.infrastructure-photo>a { display:block; background:var(--white); border:1px solid var(--rule); cursor:zoom-in }
+.story-photo img,.timeline-photo img,.leadership-photo img,.education-photo img,.case-photo img,.infrastructure-photo img { display:block; width:100%; height:auto; object-fit:contain }
+.story-photo figcaption,.timeline-photo figcaption,.leadership-photo figcaption,.education-photo figcaption,.case-photo figcaption,.infrastructure-photo figcaption { color:var(--grey); font:400 10px/1.8 'JetBrains Mono',monospace; padding:10px 0 0; margin:0 }
+.story-photo { margin-bottom:25px }
+.infrastructure-photos { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); gap:30px; margin-top:38px; align-items:start }
+.infrastructure-photo>a { padding:16px; background:var(--paper) }
+.infrastructure-photo:not(.panorama-photo) img { height:300px; object-fit:contain }
+.panorama-photo { grid-column:1/-1 }
+.panorama-photo>a { padding:0 }
+.timeline-photo { margin:22px 0 }
+.timeline-photo img { max-height:330px; object-fit:contain }
+.workplace-portrait { width:min(100%,340px); margin-inline:auto }
+.workplace-portrait img { width:100%; height:auto; max-height:none }
+.leadership-photo { margin-top:22px }
+.leadership-photo img { max-height:300px }
+.education-photo { margin-bottom:25px }
+.case-photo-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:22px; margin-bottom:30px }
+.case-photo img { max-height:340px }
+.case-photo-row a:focus-visible { outline:2px solid var(--ink); outline-offset:4px }
+@media(max-width:800px) { .portrait-cover { padding-left:0; max-width:400px; justify-self:start }.portrait-cover::before { right:-12px; left:25px }.hero-portrait-photo img { max-height:480px }.infrastructure-photos { gap:24px } }
+@media(max-width:560px) { .portrait-cover { max-width:340px; padding-right:12px }.portrait-cover::before { right:0 }.hero-portrait-photo img { max-height:none }.infrastructure-photos { grid-template-columns:1fr }.panorama-photo { grid-column:auto }.infrastructure-photo:not(.panorama-photo) img { height:auto; max-height:320px }.infrastructure-photo>a { padding:12px }.panorama-photo>a { padding:0 }.story-photo figcaption,.timeline-photo figcaption,.leadership-photo figcaption,.education-photo figcaption,.infrastructure-photo figcaption { font-size:9px } }

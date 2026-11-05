@@ -1,0 +1,154 @@
+/* Full-screen portfolio choice. All artwork is local, editable SVG. */
+body[data-page="entrance"] { margin:0; background:#f0eee7; color:#173b3b }
+.entrance-header {
+  min-height:72px;
+  padding:18px 4vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.entrance-name { text-decoration:none; font-size:19px; font-weight:650; letter-spacing:-.04em }
+.entrance-header p { font-size:11px; text-transform:uppercase; letter-spacing:.15em }
+.entrance-title { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap }
+.experience-choices { display:grid; grid-template-columns:1fr 1fr; min-height:calc(100svh - 112px) }
+.experience-choice {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  min-height:580px;
+  padding:clamp(28px,4.5vw,76px);
+  text-decoration:none;
+}
+.choice-it { background:#e3e9e2; color:#173b3b; border-right:1px solid #b8c6bc }
+.choice-culture { background:#35241f; color:#f5dfbd }
+.choice-art {
+  position:absolute;
+  z-index:-2;
+  top:0;
+  left:0;
+  width:100%;
+  height:50%;
+  object-fit:contain;
+  opacity:.18;
+  transform:translateY(18px) scale(.94);
+  transition:opacity .6s ease,transform .8s cubic-bezier(.2,.7,.2,1),filter .6s ease;
+}
+.choice-copy { width:100%; position:relative }
+.choice-number { font:11px/1.5 monospace; text-transform:uppercase; letter-spacing:.14em; margin-bottom:18px; display:block }
+.experience-choice h2 { font-size:clamp(2.5rem,4vw,4.25rem); line-height:1.06; max-width:13ch; margin:0 0 18px }
+.choice-description { font-size:14px; line-height:1.7; max-width:37ch; margin:0 }
+.choice-enter { display:flex; align-items:center; justify-content:space-between; border-top:1px solid currentColor; margin-top:30px; padding-top:18px; font-size:12px; letter-spacing:.04em }
+.choice-arrow { font-size:28px; line-height:1; transition:transform .3s ease }
+.choice-hint { font:10px/1.6 monospace; opacity:.75; letter-spacing:.1em; text-transform:uppercase; display:block; margin-top:12px }
+.experience-choice::before { content:""; position:absolute; z-index:-1; inset:0; pointer-events:none }
+.choice-it::before { background:linear-gradient(0deg,#e3e9e2 0%,#e3e9e2f5 22%,#e3e9e200 65%) }
+.choice-culture::before { background:linear-gradient(0deg,#35241f 0%,#35241ff5 22%,#35241f00 65%) }
+.experience-choice:is(:hover,:focus-visible) .choice-art { opacity:1; transform:translateY(-5px) scale(1); filter:drop-shadow(0 8px 20px #0001) }
+.experience-choice:is(:hover,:focus-visible) .choice-arrow { transform:translate(4px,-4px) }
+.experience-choice:focus-visible { outline:3px solid #c9a069; outline-offset:-7px }
+.entrance-footer { min-height:40px; display:flex; justify-content:space-between; gap:16px; align-items:center; padding:10px 4vw; font-size:10px; letter-spacing:.06em }
+@media(min-width:1500px) { .choice-art { height:58% } }
+@media(max-width:760px) {
+  .entrance-header { min-height:64px; padding:15px 5vw }
+  .entrance-name { font-size:17px }
+  .entrance-header p { font-size:9px; max-width:14ch; text-align:right }
+  .experience-choices { grid-template-columns:1fr; min-height:calc(100svh - 104px) }
+  .experience-choice { min-height:calc((100svh - 104px)/2); padding:24px 6vw }
+  .choice-it { border-right:0; border-bottom:1px solid #b8c6bc }
+  .choice-art { left:auto; right:-9%; top:-7%; width:65%; height:110%; opacity:.6; transform:none }
+  .choice-copy { max-width:75% }
+  .experience-choice h2 { font-size:clamp(1.7rem,6.8vw,2.6rem); max-width:15ch; margin-bottom:10px }
+  .choice-number { font-size:9px; margin-bottom:10px }
+  .choice-description { font-size:11px; max-width:27ch }
+  .choice-enter { margin-top:16px; padding-top:10px; font-size:10px }
+  .choice-hint { display:none }
+  .choice-it::before { background:linear-gradient(90deg,#e3e9e2 0%,#e3e9e2e0 35%,#e3e9e200 100%) }
+  .choice-culture::before { background:linear-gradient(90deg,#35241f 0%,#35241fe0 35%,#35241f00 100%) }
+  .entrance-footer { font-size:9px }
+}
+@media(hover:none) { .choice-art { opacity:.7; transform:none }.choice-hint { display:none } }
+@media(prefers-reduced-motion:reduce) { .choice-art,.choice-arrow { transition:none }.experience-choice:is(:hover,:focus-visible) .choice-art { transform:none }.experience-choice:is(:hover,:focus-visible) .choice-arrow { transform:none } }
+
+/* Artwork behind the choice cards. Each object reveals around the card edges. */
+.experience-choice { align-items:center; justify-content:center; padding:70px 40px }
+.experience-choice::before { display:none }
+.choice-copy {
+  z-index:2;
+  width:min(100%,380px);
+  padding:32px;
+  border:1px solid #afbeb4;
+  border-radius:8px 32px 8px 8px;
+  background:#edf1eaf5;
+  box-shadow:0 20px 60px #173b3b12;
+  transition:transform .45s ease,box-shadow .45s ease;
+}
+.choice-culture .choice-copy { background:#3b2924f5; border-color:#85624d; box-shadow:0 20px 60px #0003 }
+.experience-choice h2 { font-size:clamp(2rem,3.3vw,3.3rem) }
+.choice-art {
+  z-index:1;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transform:scale(.78);
+  pointer-events:none;
+}
+.choice-prop { position:absolute; width:145px; height:auto; filter:drop-shadow(0 10px 12px #0002) }
+.prop-router { top:1%; left:34%; width:160px; transform:rotate(-8deg) }
+.prop-switch { bottom:2%; left:27%; width:190px; transform:rotate(8deg) }
+.prop-camera { top:22%; left:-1%; width:135px; transform:rotate(-12deg) }
+.prop-firewall { bottom:13%; right:-1%; width:145px; transform:rotate(12deg) }
+.prop-ethernet { bottom:18%; left:1%; width:88px; transform:rotate(-18deg) }
+.prop-djembe { top:7%; left:-2%; width:155px; transform:rotate(-17deg) }
+.prop-dundun { top:0; right:3%; width:135px; transform:rotate(15deg) }
+.prop-krin { bottom:3%; left:8%; width:190px; transform:rotate(-12deg) }
+.prop-kora { bottom:0; right:-2%; width:148px; transform:rotate(14deg) }
+.experience-choice:is(:hover,:focus-visible) .choice-art { opacity:1; transform:scale(1) }
+.experience-choice:is(:hover,:focus-visible) .choice-copy { transform:translateY(-4px); box-shadow:0 25px 65px #0002 }
+@media(max-width:1050px) and (min-width:761px) {
+  .experience-choice { padding:85px 45px }
+  .choice-copy { padding:25px }
+  .choice-prop { max-width:125px }
+}
+@media(max-width:760px) {
+  .experience-choice { padding:30px 15vw }
+  .choice-copy { width:100%; max-width:100%; padding:20px }
+  .experience-choice h2 { font-size:clamp(1.5rem,5.7vw,2.2rem) }
+  .choice-prop { max-width:80px }
+  .prop-router { top:0; left:2% }
+  .prop-switch { bottom:0; left:25%; max-width:110px }
+  .prop-camera { top:4%; left:auto; right:0 }
+  .prop-firewall { bottom:8%; right:0 }
+  .prop-ethernet { bottom:8%; left:0; max-width:50px }
+  .prop-djembe { left:-2%; top:5% }
+  .prop-dundun { right:0; top:0; max-width:65px }
+  .prop-krin { left:0; bottom:0; max-width:100px }
+  .prop-kora { right:-1%; bottom:0; max-width:65px }
+}
+@media(hover:none) { .choice-art { opacity:.85; transform:none } }
+@media(prefers-reduced-motion:reduce) {
+  .choice-copy { transition:none }
+  .experience-choice:is(:hover,:focus-visible) .choice-copy { transform:none }
+}
+
+/* Original supplied instrument ensemble on the cultural selection card. */
+.choice-photo {
+  display:block;
+  width:100%;
+  height:clamp(110px,16svh,160px);
+  object-fit:cover;
+  object-position:center 55%;
+  background:#ddc7a7;
+  border-radius:4px 16px 4px 4px;
+  margin-bottom:18px;
+}
+@media(max-width:760px) {
+  .choice-photo {
+    width:100%;
+    height:120px;
+    margin:0 0 16px;
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 590" fill="none">
+<defs><linearGradient id="metal" x2="0" y2="1"><stop stop-color="#e2f3ee"/><stop offset="1" stop-color="#9fbfb9"/></linearGradient><radialGradient id="halo"><stop stop-color="#3b9e95" stop-opacity=".22"/><stop offset="1" stop-color="#3b9e95" stop-opacity="0"/></radialGradient></defs>
+<circle cx="380" cy="288" r="265" fill="url(#halo)"/>
+<g stroke="#557f7c" stroke-width="1" opacity=".35"><circle cx="380" cy="288" r="224" stroke-dasharray="3 10"/><circle cx="380" cy="288" r="170"/><path d="M100 288h560M380 40v490"/></g>
+<!-- Ethernet topology: router, hub, firewall, and two IP cameras. -->
+<g stroke="#377f78" stroke-width="3" stroke-linejoin="round"><path d="M380 174v62M380 322v64M263 280H157v-88M497 280h106v-88M380 454v38H187v-53M380 492h192v-53"/><path d="M380 174v62M380 322v64M263 280H157v-88M497 280h106v-88" stroke="#c9a069" stroke-dasharray="5 13"/></g>
+<!-- Router -->
+<g stroke="#254c4a" stroke-width="2.5"><path d="M302 134l78-27 79 27-79 28z" fill="#edf5ef"/><path d="M302 134v36l78 29 79-29v-36l-79 28z" fill="url(#metal)"/><path d="M380 162v37M324 104V64M436 104V64"/><circle cx="324" cy="60" r="4" fill="#c9a069"/><circle cx="436" cy="60" r="4" fill="#c9a069"/><path d="M337 91q43-38 86 0M350 100q30-25 60 0" stroke="#377f78"/><path d="M320 154l8 3m8 3 8 3m8 3 8 3" stroke="#377f78"/></g>
+<!-- Central managed switch -->
+<g stroke="#254c4a" stroke-width="2.5"><path d="M263 261l117-36 117 36-117 39z" fill="#edf5ef"/><path d="M263 261v51l117 40 117-40v-51l-117 39z" fill="url(#metal)"/><path d="M380 300v52"/><g fill="#183c3a"><path d="M278 284l13 4v14l-13-4zM300 291l13 4v14l-13-4zM322 299l13 4v14l-13-4zM344 306l13 4v14l-13-4z"/></g><g stroke="#c9a069"><path d="M398 306l12-4m8-2 12-4m8-3 12-4m8-2 12-4"/></g><circle cx="366" cy="333" r="3" fill="#377f78"/></g>
+<!-- Camera left -->
+<g stroke="#254c4a" stroke-width="2.5"><path d="M108 127l51-17 57 23-51 18z" fill="#edf5ef"/><path d="M108 127v39l57 23v-38z" fill="url(#metal)"/><path d="M165 151l51-18v39l-51 17z" fill="#b7d3cb"/><ellipse cx="187" cy="158" rx="12" ry="14" fill="#254c4a"/><ellipse cx="187" cy="158" rx="5" ry="7" fill="#c9a069"/><path d="M145 181v25h-25m0-12v24"/></g>
+<!-- Camera right -->
+<g stroke="#254c4a" stroke-width="2.5"><path d="M549 133l51-23 57 17-51 24z" fill="#edf5ef"/><path d="M549 133v39l57 17v-38z" fill="#b7d3cb"/><path d="M606 151l51-24v39l-51 23z" fill="url(#metal)"/><ellipse cx="575" cy="158" rx="12" ry="14" fill="#254c4a"/><ellipse cx="575" cy="158" rx="5" ry="7" fill="#c9a069"/><path d="M623 181v25h25m0-12v24"/></g>
+<!-- Firewall with brick face and shield -->
+<g stroke="#254c4a" stroke-width="2.5"><path d="M325 390l83-27 52 20-83 29z" fill="#e8c89f"/><path d="M325 390v65l52 22v-65z" fill="#a87549"/><path d="M377 412l83-29v64l-83 30z" fill="#d6aa76"/><path d="M325 411l52 22 83-29M325 434l52 22 83-29M350 401v22m0 22v21M405 402v21m28-31v21m-28 30v24m28-34v24"/><path d="M381 383l20-7 20 7v20c0 16-20 29-20 29s-20-7-20-22z" fill="#edf5ef"/><path d="M390 401l8 7 13-17" stroke="#377f78"/></g>
+<!-- Ethernet plugs -->
+<g stroke="#254c4a" stroke-width="2.5" fill="#b7d3cb"><path d="M167 406h40v38h-40zM175 395h24v11h-24zM552 406h40v38h-40zM560 395h24v11h-24z"/><path d="M176 412v15m8-15v15m8-15v15m-8 17v20M561 412v15m8-15v15m8-15v15m-8 17v20"/></g>
+<g fill="#254c4a" font-family="monospace" font-size="11" letter-spacing="2" text-anchor="middle"><text x="380" y="43">CONNECTED BY DESIGN</text><text x="157" y="241">IP CAMERA</text><text x="603" y="241">IP CAMERA</text><text x="380" y="218">ROUTER</text><text x="380" y="376">SWITCH / HUB</text><text x="405" y="516">FIREWALL</text><text x="187" y="491">ETHERNET</text></g>
+</svg>

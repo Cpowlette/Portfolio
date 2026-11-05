@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="310 350 165 140" fill="none"><defs><linearGradient id="metal" x2="0" y2="1"><stop stop-color="#e2f3ee" /><stop offset="1" stop-color="#9fbfb9" /></linearGradient><radialGradient id="halo"><stop stop-color="#3b9e95" stop-opacity=".22" /><stop offset="1" stop-color="#3b9e95" stop-opacity="0" /></radialGradient></defs>
+<g stroke="#254c4a" stroke-width="2.5"><path d="M325 390l83-27 52 20-83 29z" fill="#e8c89f" /><path d="M325 390v65l52 22v-65z" fill="#a87549" /><path d="M377 412l83-29v64l-83 30z" fill="#d6aa76" /><path d="M325 411l52 22 83-29M325 434l52 22 83-29M350 401v22m0 22v21M405 402v21m28-31v21m-28 30v24m28-34v24" /><path d="M381 383l20-7 20 7v20c0 16-20 29-20 29s-20-7-20-22z" fill="#edf5ef" /><path d="M390 401l8 7 13-17" stroke="#377f78" /></g>
+
+</svg>

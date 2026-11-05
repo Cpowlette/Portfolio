@@ -1,0 +1,602 @@
+:root {
+  --paper:#fbf8f3;
+  --ink:#171717;
+  --muted:#595959;
+  --gold:#c9a069;
+  --line:#d9d0c4;
+  --dark:#192d32;
+  --serif:Georgia,'Times New Roman',serif}
+
+* {
+  box-sizing:border-box}
+html {
+  scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:16px/1.7 system-ui,-apple-system,'Segoe UI',sans-serif}
+a {
+  color:inherit;
+  text-underline-offset:5px}
+img {
+  display:block;
+  width:100%;
+  height:auto}
+button {
+  font:inherit}
+h1,h2,h3,p {
+  margin:0}
+h1,h2,h3 {
+  line-height:1.1;
+  font-weight:400}
+h1,h2 {
+  font-family:var(--serif);
+  letter-spacing:-.045em}
+h1 {
+  font-size:clamp(3.3rem,7.5vw,7rem)}
+h2 {
+  font-size:clamp(2.3rem,5vw,4.4rem)}
+h3 {
+  font-family:var(--serif);
+  font-size:1.8rem}
+p+p {
+  margin-top:16px}
+.shell {
+  width:min(1240px,90%);
+  margin-inline:auto}
+.site-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+  padding-block:25px;
+  border-bottom:1px solid var(--line)}
+.wordmark {
+  font-weight:650;
+  text-decoration:none;
+  letter-spacing:-.04em;
+  font-size:20px}
+.site-top nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  font-size:13px}
+.site-top nav a {
+  text-decoration:none}
+.site-top [aria-current=page] {
+  border-bottom:2px solid var(--gold)}
+.skip {
+  position:fixed;
+  top:-100px;
+  left:20px;
+  background:white;
+  padding:12px;
+  z-index:10}
+.skip:focus {
+  top:12px}
+:focus-visible {
+  outline:3px solid var(--gold);
+  outline-offset:5px}
+.kicker {
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.17em;
+  font-weight:650;
+  color:var(--muted);
+  margin-bottom:20px}
+.intro {
+  padding-block:64px 44px;
+  display:grid;
+  grid-template-columns:1.5fr 1fr;
+  align-items:end;
+  gap:50px}
+.intro p:last-child {
+  max-width:38ch;
+  color:var(--muted)}
+.intro h1 {
+  max-width:14ch}
+.paths {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-bottom:70px}
+.path {
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  overflow:hidden;
+  border-radius:3px 40px 3px 3px;
+  background:#fff;
+  position:relative}
+.path-visual {
+  height:300px;
+  overflow:hidden;
+  background:#e6ded1}
+.path-visual img {
+  height:100%;
+  object-fit:cover;
+  object-position:50% 25%;
+  transition:transform .4s}
+.path-tech .path-visual img {
+  object-fit:contain;
+  background:#e8e3db}
+.path:hover .path-visual img {
+  transform:scale(1.025)}
+.path-body {
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+  flex:1}
+.path h2 {
+  font-size:clamp(2rem,3.4vw,3.4rem);
+  max-width:15ch;
+  margin-bottom:18px}
+.path .sub {
+  font-size:13px;
+  letter-spacing:.02em;
+  margin-bottom:16px}
+.path-body>p:not(.kicker):not(.sub) {
+  font-size:14px;
+  max-width:46ch}
+.path .tags {
+  font-size:11px;
+  letter-spacing:.06em;
+  padding-block:23px;
+  margin-top:auto}
+.path-culture {
+  background:var(--dark);
+  color:#fff;
+  border-color:var(--dark)}
+.path-culture .kicker {
+  color:#e3c39b}
+.path-culture .path-visual {
+  background:#0c2026}
+.enter {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-top:1px solid var(--line);
+  padding-top:20px;
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none}
+.enter::after {
+  content:'\2197';
+  font-size:26px;
+  font-weight:400}
+.path-culture .enter {
+  border-color:#5d7579}
+.foot {
+  padding-block:26px;
+  border-top:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:12px;
+  color:var(--muted)}
+
+.culture-hero {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:7%;
+  padding-block:70px;
+  align-items:center}
+.culture-hero h1 {
+  font-size:clamp(3.5rem,6.6vw,6.5rem)}
+.culture-hero .lead {
+  font-size:18px;
+  color:var(--muted);
+  max-width:46ch;
+  margin-top:30px}
+.culture-hero figure {
+  margin:0;
+  position:relative}
+.culture-hero img {
+  border-radius:100px 4px 4px 4px;
+  background:var(--dark)}
+figcaption {
+  font-size:11px;
+  color:var(--muted);
+  margin-top:12px}
+.actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px}
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--ink);
+  color:#fff;
+  padding:12px 20px;
+  text-decoration:none;
+  border:1px solid var(--ink);
+  font-size:13px;
+  min-height:46px}
+.button.secondary {
+  color:var(--ink);
+  background:transparent}
+.section {
+  padding-block:70px;
+  border-top:1px solid var(--line)}
+.section-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:35px;
+  margin-bottom:35px}
+.section-head>p {
+  max-width:37ch;
+  color:var(--muted);
+  font-size:14px}
+.video-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px}
+.video-card {
+  min-width:0}
+.video-card h3 {
+  font-size:24px;
+  margin:19px 0 10px}
+.video-card p {
+  font-size:13px;
+  color:var(--muted)}
+.video-card>a {
+  display:inline-block;
+  font-size:12px;
+  margin-top:15px}
+.video-frame {
+  width:100%;
+  aspect-ratio:16/9;
+  background:#182b30;
+  border:0;
+  display:block}
+.facebook-frame {
+  height:auto;
+  aspect-ratio:16/9;
+  background:#182b30}
+.facebook-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-top:34px}
+.media-note {
+  font-size:12px;
+  color:var(--muted);
+  margin-top:24px}
+.stories {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px}
+.story {
+  padding:32px;
+  border:1px solid var(--line);
+  background:white}
+.story h3 {
+  margin:0 0 20px}
+.story p {
+  font-size:14px;
+  color:var(--muted)}
+.story a {
+  display:inline-block;
+  margin-top:22px;
+  font-size:12px}
+.story .credit {
+  border-left:2px solid var(--gold);
+  padding-left:16px;
+  color:var(--ink)}
+.social-band {
+  background:var(--dark);
+  color:#fff;
+  padding-block:65px}
+.social-band .kicker {
+  color:#e3c39b}
+.social-links {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  margin-top:35px;
+  gap:16px}
+.social-links a {
+  padding:22px 0;
+  border-top:1px solid #769095;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column}
+.social-links small {
+  color:#d1dde0}
+.social-band .switch {
+  display:inline-block;
+  margin-top:35px;
+  font-size:13px}
+.culture-gallery {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:34px}
+.culture-gallery figure {
+  margin:0}
+.culture-gallery img {
+  max-height:600px;
+  object-fit:contain;
+  background:#e7e0d5}
+
+@media(min-width:1600px) {
+  .path-visual {
+  height:340px}
+}
+@media(max-width:760px) {
+  .intro {
+  grid-template-columns:1fr;
+  gap:25px;
+  padding-top:45px}
+.intro p:last-child {
+  max-width:48ch}
+.paths,.culture-hero,.stories {
+  grid-template-columns:1fr}
+.path-visual {
+  height:280px}
+.path-body {
+  padding:26px}
+.culture-hero {
+  gap:35px;
+  padding-block:45px}
+.culture-hero figure {
+  max-width:560px}
+.video-grid {
+  grid-template-columns:1fr}
+.video-card {
+  padding-bottom:20px}
+.section-head {
+  display:block}
+.section-head>p {
+  margin-top:20px;
+  max-width:50ch}
+.social-links {
+  grid-template-columns:1fr}
+.section {
+  padding-block:45px}
+.site-top {
+  align-items:start}
+.site-top nav {
+  justify-content:flex-end;
+  gap:8px 15px}
+.foot {
+  flex-direction:column;
+  gap:8px}
+.culture-gallery {
+  grid-template-columns:1fr}
+}
+
+.intro {
+  padding-block:40px 32px}
+.intro h1 {
+  font-size:clamp(3.2rem,6vw,5.5rem);
+  max-width:16ch}
+.path-visual {
+  height:230px}
+.path-culture .path-visual img {
+  object-fit:contain;
+  background:var(--dark)}
+
+@media(max-width:760px) {
+  .intro {
+  padding-top:40px}
+.path-visual {
+  height:240px}
+.site-top .wordmark {
+  flex:0 0 120px}
+.site-top nav a {
+  overflow-wrap:anywhere}
+}
+
+/* Original cultural photography: full proportions and full-image links. */
+.cultural-photo-link { display:block }
+.culture-hero .cultural-photo-link { max-width:480px; margin-inline:auto }
+.culture-hero .cultural-photo-link img { width:100%; height:auto; border-radius:70px 4px 4px 4px }
+.culture-hero figcaption { text-align:center }
+.culture-landscape { margin-block:0 54px }
+.culture-landscape a { max-width:1000px; margin-inline:auto }
+.culture-landscape img { height:auto; border-radius:4px }
+.culture-landscape figcaption { max-width:1000px; margin-inline:auto }
+.connect-identity { display:flex; align-items:center; gap:28px }
+.connect-identity>a { flex:0 0 128px; width:128px }
+.connect-identity img { width:128px; height:auto; border-radius:4px 28px 4px 4px }
+@media(max-width:600px) {
+  .connect-identity { align-items:flex-start; flex-direction:column; gap:22px }
+  .connect-identity>a,.connect-identity img { width:100px; flex-basis:auto }
+  .culture-landscape { margin-bottom:35px }
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+  scroll-behavior:auto}
+.path-visual img {
+  transition:none}
+.path:hover .path-visual img {
+  transform:none}
+}
+
+
+/* Supplied Friday Night Drummers photograph above the performance videos. */
+.friday-drummers-feature { margin:0 auto 36px; max-width:945px }
+.friday-drummers-feature img { width:100%; height:auto; border-radius:4px 28px 4px 4px }
+
+/* Younger years at Afiwi: retain the supplied 200 x 300 photo proportions. */
+.early-days-layout { display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:center }
+.early-days-layout h3 { font-size:25px; margin:26px 0 14px }
+.early-days-layout p:not(.kicker) { color:var(--muted); font-size:14px; max-width:58ch }
+.early-days-layout .early-days-memory { margin-top:25px; color:var(--ink) }
+.early-days-source { display:inline-block; margin-top:22px; font-size:13px }
+.early-days-photos { display:grid; grid-template-columns:repeat(2,minmax(0,200px)); gap:22px; justify-content:center }
+.early-days-photos figure { margin:0; min-width:0 }
+.early-days-photos img { width:100%; height:auto; border-radius:4px 22px 4px 4px }
+@media(max-width:760px) {
+  .early-days-layout { grid-template-columns:1fr; gap:32px }
+  .early-days-photos { gap:16px }
+}
+
+/* Supplied Coco Collective performance photograph. */
+.coco-collective-photo { margin:0 0 22px }
+.coco-collective-photo .cultural-photo-link { display:block; margin-top:0 }
+.coco-collective-photo img { width:100%; height:auto; border-radius:4px }
+.diaspora-review { min-width:0 }
+.diaspora-review h4 { margin:26px 0 12px; font-size:18px; font-weight:500 }
+.diaspora-review .coco-collective-photo { margin:24px 0 }
+.diaspora-review figcaption { line-height:1.6 }
+
+/* Personal instrument photograph, labelled separately from performances. */
+.home-rhythm { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center }
+.home-rhythm p:not(.kicker) { margin-top:24px; color:var(--muted); font-size:15px; max-width:44ch }
+.home-rhythm figure { margin:0; max-width:460px; width:100%; justify-self:center }
+.home-rhythm img { width:100%; height:auto; border-radius:4px 28px 4px 4px }
+@media(max-width:760px) { .home-rhythm { grid-template-columns:1fr; gap:30px } }
+
+/* Cultural photo gallery: complete images without fixed-height cropping. */
+.cultural-photo-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px 24px; align-items:start }
+.cultural-photo-gallery figure { margin:0; min-width:0 }
+.cultural-photo-gallery a { display:block; border:1px solid var(--line); background:var(--paper); cursor:zoom-in }
+.cultural-photo-gallery img { width:100%; height:auto }
+@media(max-width:600px) { .cultural-photo-gallery { grid-template-columns:1fr; gap:28px } }
+
+/* The younger-years photo set includes an additional djembe memory. */
+.early-days-photos figure:last-child:nth-child(odd) { grid-column:1 / -1; width:min(200px,100%); justify-self:center }
+
+/* Local video copied from the supplied phone folder. */
+.personal-drumming-video { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:42px; padding:30px; border:1px solid var(--line); background:#fff }
+.personal-drumming-video h3 { font-size:clamp(1.8rem,3vw,2.6rem) }
+.personal-drumming-video p:not(.kicker) { color:var(--muted); font-size:14px; margin-top:18px }
+.personal-drumming-video a { display:inline-block; font-size:12px; margin-top:20px }
+.personal-drumming-video video { display:block; width:100%; max-width:320px; height:auto; justify-self:center; background:#171717 }
+@media(max-width:760px) { .personal-drumming-video { grid-template-columns:1fr; padding:22px; gap:25px } }
+
+/* Performance archive, supplied Calabash post, and renamed community. */
+.performance-archive { margin-top:45px; padding-top:35px; border-top:1px solid var(--line) }
+.performance-archive>h3 { margin-bottom:18px }
+.archive-context { font-size:14px; color:var(--muted); max-width:70ch; margin-bottom:28px }
+.calabash-instagram { margin-top:28px; border-top:1px solid var(--line); padding-top:22px }
+.calabash-instagram h4 { font-size:17px; font-weight:500; margin:0 0 18px }
+.calabash-instagram iframe { display:block; width:100%; max-width:540px; height:600px; border:0; background:#fff }
+.fnd-community-link { display:block; width:fit-content; margin-top:26px; font-size:13px }
+.calabash-program { margin-top:28px; padding-top:24px; border-top:1px solid var(--line) }
+.calabash-program h4 { margin:24px 0 14px; font-size:18px; font-weight:500 }
+.performance-credits { margin:24px 0; padding-left:16px; border-left:2px solid var(--gold); font-size:14px; line-height:1.7 }
+.performance-credits dt { margin-top:14px; font-weight:600 }
+.performance-credits dd { margin:4px 0 0; overflow-wrap:anywhere; color:var(--muted) }
+.calabash-creation { margin-top:28px; padding-top:24px; border-top:1px solid var(--line) }
+.calabash-creation h4 { margin:0 0 16px; font-size:18px; font-weight:500 }
+.collective-context { max-width:76ch; color:var(--muted); font-size:15px; margin:0 0 28px }
+.collective-archive>h3 { margin:48px 0 18px }
+.collective-portraits { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; align-items:start }
+.collective-portraits figure { margin:0; min-width:0 }
+.collective-portraits a { display:block; max-width:300px }
+.collective-portraits figure:first-child a { max-width:500px }
+.collective-portraits img { width:100%; height:auto }
+.collective-posters { max-width:1000px; margin-inline:auto }
+.collective-source { margin-top:32px; font-size:13px; color:var(--muted); line-height:1.8 }
+.collective-source a { text-decoration:underline; text-underline-offset:3px }
+.cultural-bio-context { margin-top:20px; max-width:54ch; color:var(--muted); font-size:14px; line-height:1.85 }
+.video-card .video-publication { font-size:12px; line-height:1.7; color:var(--muted) }
+.campus-showcase { display:grid; grid-template-columns:1.2fr 1fr; gap:50px; align-items:center }
+.campus-showcase p:not(.kicker) { margin-top:22px; font-size:15px; color:var(--muted); max-width:60ch }
+.campus-showcase figure { margin:0; width:100%; max-width:480px; justify-self:center }
+.campus-showcase img { width:100%; height:auto; border-radius:4px 28px 4px 4px }
+.showcase-details { font-size:14px; line-height:1.8; margin-top:26px }
+.showcase-details dt { margin-top:14px; font-weight:600 }
+.showcase-details dd { margin:3px 0 0; color:var(--muted) }
+.mural-photos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:start }
+.mural-photos figure { margin:0; min-width:0 }
+.mural-photos img { width:100%; height:auto }
+.place-jumps { display:flex; flex-wrap:wrap; gap:12px; padding-block:24px 40px }
+.place-jumps a { display:block; padding:12px 16px; border:1px solid var(--line); font-size:13px; background:#fff; text-decoration:none }
+.place-jumps a:hover,.place-jumps a:focus-visible { background:var(--dark); color:#fff }
+.place-group { padding-top:36px; border-top:1px solid var(--line); scroll-margin-top:30px }
+.place-group-heading { padding-block:20px 0 }
+.place-group-heading h2 { font-size:clamp(30px,5vw,54px); margin-top:14px }
+.place-group>.section { padding-top:50px }
+.museum-memory>.diaspora-review { margin-top:30px; max-width:860px }
+.gardiner-group-photo { margin:30px 0 24px; max-width:800px }
+.gardiner-group-photo img { width:100%; height:auto }
+.hart-house-photo { margin:30px 0 0 }
+.hart-house-photo img { width:100%; height:auto }
+.spotify-playlist { display:block; max-width:760px; border:0; border-radius:12px }
+/* Compact browsing and full-proportion media previews. */
+body:has(.place-group) .place-jumps { position:sticky; top:0; z-index:8; width:100%; padding:12px 5%; flex-wrap:nowrap; overflow-x:auto; background:var(--paper); border-block:1px solid var(--line); gap:8px; scrollbar-width:thin }
+.place-jumps a { flex:none; min-height:44px }
+.place-jumps a[aria-current=location] { background:var(--dark); color:#fff }
+.place-group,.place-group section,[id] { scroll-margin-top:100px }
+.memory-index { margin-block:20px 32px; border:1px solid var(--line); background:#fff }
+.memory-index summary { cursor:pointer; padding:14px 20px; min-height:48px; font-weight:600 }
+.memory-index nav { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:6px 20px; padding:0 20px 20px }
+.memory-index a { padding:10px 0; font-size:14px }
+.cultural-photo-gallery { max-width:960px; margin-inline:auto; gap:24px }
+.cultural-photo-gallery figure,.mural-photos figure { width:100%; max-width:440px; justify-self:center }
+.collective-posters { max-width:780px }
+.campus-showcase figure { max-width:360px }
+.gardiner-group-photo { max-width:580px }
+.hart-house-photo { max-width:860px; margin-inline:auto }
+.museum-memory>.diaspora-review { max-width:760px }
+.coco-collective-photo { max-width:560px; margin-inline:auto }
+.culture-hero figure { max-width:400px; justify-self:center }
+.mural-photos { gap:20px }
+.back-to-top { position:fixed; bottom:20px; right:20px; z-index:9; background:var(--dark); color:#fff; border:1px solid var(--line); padding:10px 16px; border-radius:24px; font-size:13px; text-decoration:none; box-shadow:0 3px 14px #0002 }
+@media(max-width:600px) { .back-to-top { bottom:12px; right:12px }.cultural-photo-gallery figure,.mural-photos figure { max-width:360px }.place-group>.section { padding-top:32px }.calabash-instagram iframe { max-width:100% } }
+.school-instagram { grid-column:1 / -1; width:100%; min-width:0 }
+.school-instagram h3 { margin-bottom:18px }
+.early-learning-layout { display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:start }
+.early-learning-layout figure { margin:0; width:100%; max-width:420px; justify-self:center }
+.early-learning-layout video { display:block; width:100%; max-height:640px; background:var(--dark) }
+@media(max-width:760px) { .early-learning-layout { grid-template-columns:1fr; gap:28px } }
+@media(max-width:760px) { .mural-photos { grid-template-columns:1fr; gap:28px } }
+@media(max-width:760px) { .campus-showcase { grid-template-columns:1fr; gap:30px } }
+@media(max-width:900px) { .collective-portraits { grid-template-columns:repeat(2,minmax(0,1fr)) } }
+@media(max-width:500px) { .collective-portraits { grid-template-columns:1fr; gap:28px } }
+
+/* Explicit institution and venue names on the drumming page. */
+.venue-heading { font-weight:700; overflow-wrap:anywhere; text-wrap:balance }
+h2.venue-heading { font-size:clamp(28px,4.2vw,48px); line-height:1.15 }
+h3.venue-heading { font-size:clamp(23px,3vw,32px); line-height:1.25 }
+h4.venue-heading { font-size:clamp(21px,2.6vw,28px); line-height:1.3; font-weight:700 }
+.venue-heading + .venue-event { margin:14px 0 24px; font-size:15px; line-height:1.6; color:var(--muted); max-width:65ch }
+
+.george-brown-video { width:100%; max-width:760px }
+
+.school-memory-video { margin:28px 0 0; width:100%; max-width:760px }
+.school-memory-video video { display:block; width:100%; max-height:640px; object-fit:contain; background:var(--dark) }
+
+/* Musician background, training, performances, and contact. */
+.musician-profile { margin-top:24px; line-height:1.8 }
+.music-record-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:28px }
+.music-record { min-width:0; padding:26px; border:1px solid var(--line); background:#fff }
+.music-record h3.venue-heading { margin:0 0 14px; font-size:clamp(22px,2.6vw,30px) }
+.music-record p,.music-record li { font-size:15px; line-height:1.8; color:var(--muted) }
+.music-record p { margin:12px 0 }
+.music-record .record-date { font-weight:700; color:var(--ink) }
+.music-record ul { padding-left:22px; margin:12px 0 }
+.music-record a { display:inline-block; margin-top:12px; font-size:14px }
+.record-group-title { margin-top:40px; font-size:24px }
+.musician-contact { margin:28px 0; font-style:normal; line-height:1.9; overflow-wrap:anywhere }
+@media(max-width:700px) { .music-record-grid { grid-template-columns:1fr }.music-record { padding:22px } }
+
+/* Calabash schedule: readable columns with contained scrolling on phones. */
+.calabash-schedule-scroll { overflow-x:auto; margin-top:28px; border:1px solid var(--line); background:#fff }
+.calabash-schedule-scroll:focus-visible { outline:3px solid var(--dark); outline-offset:4px }
+.calabash-schedule-table { width:100%; min-width:720px; border-collapse:collapse; text-align:left; font-size:14px; line-height:1.7 }
+.calabash-schedule-table caption { padding:16px 20px; text-align:left; font-weight:700 }
+.calabash-schedule-table th,.calabash-schedule-table td { padding:18px; border-top:1px solid var(--line); vertical-align:top }
+.calabash-schedule-table thead { background:var(--dark); color:#fff }
+.calabash-schedule-table tbody th { width:28%; font-weight:700 }
+.calabash-schedule-table th span { display:block; margin-top:8px; font-weight:400; color:var(--muted) }
+.calabash-schedule-table td h3 { margin:0 0 8px; font:700 17px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif }
+.calabash-schedule-table td p { margin:0 0 10px; color:var(--muted) }
+.calabash-schedule-table td a { font-size:13px }
+
+.cecc-venue-photo { margin:28px 0; max-width:960px }
+.cecc-venue-photo img { display:block; width:100%; height:auto }
+.cecc-program { max-width:76ch; padding-left:22px; color:var(--muted); font-size:15px; line-height:1.8 }
+.cecc-program li { margin-top:12px }
+
+/* Event-specific Calabash credits. */
+.calabash-schedule-table { min-width:1050px }
+.calabash-schedule-table tbody th { width:21% }
+.calabash-schedule-table td:last-child { min-width:230px }
+.calabash-team { margin:0; padding-left:18px; font-size:14px; line-height:1.7 }
+.calabash-team li + li { margin-top:4px }
