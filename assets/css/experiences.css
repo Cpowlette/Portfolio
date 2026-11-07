@@ -600,3 +600,29 @@ h4.venue-heading { font-size:clamp(21px,2.6vw,28px); line-height:1.3; font-weigh
 .calabash-schedule-table td:last-child { min-width:230px }
 .calabash-team { margin:0; padding-left:18px; font-size:14px; line-height:1.7 }
 .calabash-team li + li { margin-top:4px }
+
+/* University of Guelph program and event-specific credits. */
+.guelph-program h5 { margin:28px 0 14px; font-size:19px; line-height:1.5; font-weight:700 }
+.guelph-program p { max-width:76ch }
+
+/* Supplied Facebook thumbnails stay at their native resolution. */
+.cultural-photo-gallery .supplied-drumming-thumb { max-width:206px }
+
+/* Category-aligned memory browsing and standalone Guelph program. */
+.memory-index-label { margin:12px 0 8px; font-size:15px }
+.memory-index-group a { display:block }
+.guelph-program h3 { margin:28px 0 14px; font-size:19px; line-height:1.5; font-weight:700 }
+.performance-index-links { padding-left:22px; max-width:80ch; line-height:1.8 }
+.performance-index-links li { margin:12px 0 }
+
+/* Public campus/venue reference imagery, separate from performance photos. */
+.venue-context { margin-top:32px; padding:22px; border:1px solid var(--line); background:#fff }
+.venue-context>.kicker { margin-bottom:18px }
+.venue-reference-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:24px; align-items:start }
+.venue-reference-photo { width:100%; max-width:800px; margin:28px 0 }
+.venue-reference-gallery .venue-reference-photo { margin:0; max-width:560px }
+.venue-reference-photo img { display:block; width:100%; height:auto; max-height:380px; object-fit:contain }
+.venue-reference-photo figcaption { margin-top:12px; font-size:12px; line-height:1.8; color:var(--muted) }
+.campus-showcase>.venue-context { grid-column:1 / -1 }
+.venue-aerial { width:100%; height:320px; display:block; border:0; background:var(--paper) }
+@media(max-width:600px) { .venue-context { padding:16px }.venue-aerial { height:280px } }

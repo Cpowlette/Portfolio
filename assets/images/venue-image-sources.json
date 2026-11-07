@@ -1,0 +1,122 @@
+{
+  "hart-house": {
+    "file": "assets/images/venue-hart-house.webp",
+    "title": "Hart House exterior, University of Toronto (2005)",
+    "alt": "Hart House exterior at the University of Toronto",
+    "author": "SimonP",
+    "source": "https://commons.wikimedia.org/wiki/File:Hart_House,_University_of_Toronto_(2005).jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "width": 654,
+    "height": 565,
+    "changes": "Resized; metadata removed."
+  },
+  "york": {
+    "file": "assets/images/venue-york-campus.webp",
+    "title": "York University campus (2023)",
+    "alt": "Aerial view of York University campus in Toronto",
+    "author": "York University Social Media",
+    "source": "https://commons.wikimedia.org/wiki/File:York_University_Campus.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1080,
+    "height": 1080,
+    "changes": "Resized; metadata removed."
+  },
+  "humber": {
+    "file": "assets/images/venue-humber-lakeshore.webp",
+    "title": "Humber Lakeshore campus landmark",
+    "alt": "Humber Lakeshore campus sign and brick landmark",
+    "author": "Nicholas Moreau / Zanimum",
+    "source": "https://commons.wikimedia.org/wiki/File:Humber_lakeshore_sign.jpg",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "width": 600,
+    "height": 800,
+    "changes": "Resized; metadata removed."
+  },
+  "ballet": {
+    "file": "assets/images/venue-national-ballet-school.webp",
+    "title": "Canada’s National Ballet School exterior",
+    "alt": "Exterior of Canada’s National Ballet School in Toronto",
+    "author": "Jeff Hitchcock",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Ballet_School_(38472077281).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "width": 1200,
+    "height": 796,
+    "changes": "Resized; metadata removed."
+  },
+  "winston": {
+    "file": "assets/images/venue-winston-churchill.webp",
+    "title": "Winston Churchill Collegiate Institute exterior (2013)",
+    "alt": "Winston Churchill Collegiate Institute building and grounds",
+    "author": "FreshCorp619",
+    "source": "https://commons.wikimedia.org/wiki/File:Winston_Churchill_CI.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 1200,
+    "height": 900,
+    "changes": "Resized; metadata removed."
+  },
+  "george-brown": {
+    "file": "assets/images/venue-george-brown.webp",
+    "title": "George Brown College / St. James campus",
+    "alt": "George Brown College St. James campus building",
+    "author": "OhanaUnited",
+    "source": "https://commons.wikimedia.org/wiki/File:1874_Christie,_Brown_%26_Co._George_Brown_St._James_Campus.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1200,
+    "height": 780,
+    "changes": "Resized; metadata removed."
+  },
+  "notre-dame": {
+    "file": "assets/images/venue-notre-dame-ajax.webp",
+    "title": "Notre Dame Catholic Secondary School / Ajax (2021)",
+    "alt": "Notre Dame Catholic Secondary School building entrance in Ajax",
+    "author": "Harhar05",
+    "source": "https://commons.wikimedia.org/wiki/File:Notre_Dame_Catholic_Secondary_School.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1200,
+    "height": 900,
+    "changes": "Resized; metadata removed."
+  },
+  "guelph-room": {
+    "file": "assets/images/venue-guelph-improvlab.webp",
+    "title": "ImprovLab room view / University of Guelph",
+    "alt": "Seating and tall windows inside ImprovLab at the University of Guelph",
+    "author": "IICSI",
+    "source": "https://improvisationinstitute.ca/improvlab/",
+    "license": "Published by IICSI",
+    "licenseUrl": "",
+    "width": 768,
+    "height": 1024,
+    "changes": "Resized; metadata removed."
+  },
+  "waterloo-banner": {
+    "file": "assets/images/waterloo-pair-symposium-banner.webp",
+    "title": "PAIR Symposium: Black and Free edition",
+    "alt": "Official PAIR Symposium Black and Free banner, November 3 to 5, 2026",
+    "author": "University of Waterloo / PAIR",
+    "source": "https://uwaterloo.ca/pan-african-initiative-for-research/pair-symposium-black-and-free-edition",
+    "license": "Official event banner",
+    "licenseUrl": "",
+    "width": 1200,
+    "height": 600,
+    "changes": "Resized; metadata removed."
+  },
+  "waterloo-building": {
+    "file": "assets/images/venue-waterloo-needles-hall.webp",
+    "title": "Needles Hall North exterior / Waterloo",
+    "alt": "Exterior entrance and access ramp at Needles Hall North",
+    "author": "University of Waterloo",
+    "source": "https://uwaterloo.ca/accessability-services/about/photo-gallery-accessability-services",
+    "license": "Official venue photograph",
+    "licenseUrl": "",
+    "width": 797,
+    "height": 532,
+    "changes": "Resized; metadata removed."
+  }
+}
